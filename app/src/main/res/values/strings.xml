@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">NewsApp</string>
+    <string name="no_data">Currently we do not have any news\nfor you.</string>
+    <string name="please_retry">Please Retry</string>
+    <string name="retry">Retry</string>
+    <string name="articles_list">Articles</string>
+    <string name="articles_detail">Articles Detail</string>
+    <string name="an_error_happened">An error happened, please retry !</string>
+</resources>
