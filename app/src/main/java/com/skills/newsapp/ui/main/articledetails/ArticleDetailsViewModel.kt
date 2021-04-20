@@ -42,10 +42,9 @@ class ArticleDetailsViewModel(
 
             articlesMediatorLiveData.addSource(articleSource) {
                 articlesMediatorLiveData.value = it.data
+                if (it.status == Resource.Status.SUCCESS)  isLoading.value = false
                 if (it.status == Resource.Status.ERROR) showToast.value = it?.error?.localizedMessage
             }
-
-            isLoading.value = false
 
             EspressoIdlingResource.decrement()
         }

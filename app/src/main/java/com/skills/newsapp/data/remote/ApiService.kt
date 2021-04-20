@@ -19,7 +19,4 @@ interface ApiService {
     fun getArticles(
         @Path("period") period: Int
     ): Deferred<ApiResult<ArticleEntity>>
-
-    @GET
-    suspend fun getArticleDetails(@Url url: String?) : Deferred<String>
 }

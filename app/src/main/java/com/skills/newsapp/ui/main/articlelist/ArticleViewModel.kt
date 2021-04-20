@@ -44,10 +44,9 @@ class ArticleViewModel(
                 articleSource = articleDataSource.getArticles(period,forceRefresh)
             }
 
-            isLoading.value = false
-
             articlesMediatorLiveData.addSource(articleSource) {
                 mapArticlesDataItem(it.data)
+                if (it.status == Resource.Status.SUCCESS)  isLoading.value = false
                 if (it.status == Resource.Status.ERROR) showToast.value = it?.error?.localizedMessage
             }
 
